@@ -1,0 +1,39 @@
+# === Global system files ===
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# === Python / FastAPI backend ===
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.sqlite3
+*.db
+*.log
+.venv/
+env/
+venv/
+
+# === Node / Next.js frontend (redundant if already inside frontend/.gitignore) ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# === Environment and secrets ===
+.env
+.env.*    # e.g. .env.local, .env.development, etc.
+
+# === VSCode / IDE ===
+.vscode/
+.idea/
+
+# === Output folders ===
+dist/
+build/
+coverage/
+
+# === OS-specific ===
+*.bak
+*.tmp

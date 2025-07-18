@@ -1,0 +1,27 @@
+services:
+  backend:
+    build: ./backend
+    container_name: geo_backend
+    volumes:
+      - ./backend:/app
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    depends_on:
+      - geo_db
+
+  geo_db:
+    image: postgis/postgis:15-3.3
+    container_name: geo_db
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
