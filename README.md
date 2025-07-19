@@ -35,14 +35,16 @@ A full-stack web application to add and visualize geo-tagged company data on an 
 │   │   ├── models.py
 │   │   ├── schemas.py
 │   │   └── ...
-│   └── .env.example      # Backend env vars
+│   └── ...
 ├── frontend/             # Next.js frontend
 │   ├── app/
 │   ├── components/
-│   └── .env.example      # Frontend env vars
+│   └── .env              # Frontend env vars
+├── .env                  # Backend env vars
 ├── docker-compose.yml    # Container orchestration
 ├── .gitignore
 └── README.md
+
 ```
 
 ---
@@ -56,15 +58,21 @@ git clone https://github.com/ammarbinshakir/geo-company-map.git
 cd geo-company-map
 ```
 
-### 2. Create Environment Files
+### ✅ 2. Create Environment Files
 
-```bash
-cp .env.example .env
-cp frontend/.env.example frontend/.env
+Create the following `.env` files manually:
+
+#### 🔹 `.env` (at project root, used by **backend**)
+
+```env
+DATABASE_URL=postgresql://postgres:postgres@geo_db:5432/postgres
 ```
 
-Update values if needed.
+#### 🔹 `frontend/.env` (used by **frontend**)
 
+```env
+NEXT_PUBLIC_API_URL=http://localhost:8000
+```
 ### 3. Run with Docker Compose
 
 ```bash
