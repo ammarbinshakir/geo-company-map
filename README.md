@@ -58,7 +58,7 @@ git clone https://github.com/ammarbinshakir/geo-company-map.git
 cd geo-company-map
 ```
 
-### ✅ 2. Create Environment Files
+### 2. Create Environment Files
 
 Create the following `.env` files:
 
