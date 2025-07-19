@@ -59,7 +59,7 @@ cd geo-company-map
 ### 2. Create Environment Files
 
 ```bash
-cp backend/.env.example backend/.env
+cp .env.example .env
 cp frontend/.env.example frontend/.env
 ```
 
