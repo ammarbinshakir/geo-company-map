@@ -11,6 +11,19 @@ services:
     depends_on:
       - geo_db
 
+  frontend:
+    build: ./frontend
+    container_name: geo_frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - backend
+
   geo_db:
     image: postgis/postgis:15-3.3
     container_name: geo_db
