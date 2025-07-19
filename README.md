@@ -52,7 +52,7 @@ A full-stack web application to add and visualize geo-tagged company data on an 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/geo-company-map.git
+git clone https://github.com/ammarbinshakir/geo-company-map.git
 cd geo-company-map
 ```
 
