@@ -45,19 +45,19 @@ async function handleResponse<T>(response: Response): Promise<T> {
 export const api = {
   // Get all companies
   async getCompanies(): Promise<Company[]> {
-    const response = await fetch(`${API_BASE_URL}/companies`);
+    const response = await fetch(`${API_BASE_URL}/api/v1/companies`);
     return handleResponse<Company[]>(response);
   },
 
   // Get a single company by ID
   async getCompany(id: number): Promise<Company> {
-    const response = await fetch(`${API_BASE_URL}/companies/${id}`);
+    const response = await fetch(`${API_BASE_URL}/api/v1/companies/${id}`);
     return handleResponse<Company>(response);
   },
 
   // Create a new company
   async createCompany(data: CreateCompanyData): Promise<Company> {
-    const response = await fetch(`${API_BASE_URL}/companies`, {
+    const response = await fetch(`${API_BASE_URL}/api/v1/companies`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -69,7 +69,7 @@ export const api = {
 
   // Update a company
   async updateCompany(id: number, data: UpdateCompanyData): Promise<Company> {
-    const response = await fetch(`${API_BASE_URL}/companies/${id}`, {
+    const response = await fetch(`${API_BASE_URL}/api/v1/companies/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -81,7 +81,7 @@ export const api = {
 
   // Delete a company
   async deleteCompany(id: number): Promise<{ message: string }> {
-    const response = await fetch(`${API_BASE_URL}/companies/${id}`, {
+    const response = await fetch(`${API_BASE_URL}/api/v1/companies/${id}`, {
       method: "DELETE",
     });
     return handleResponse<{ message: string }>(response);

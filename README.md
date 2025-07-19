@@ -73,6 +73,7 @@ DATABASE_URL=postgresql://postgres:postgres@geo_db:5432/postgres
 ```env
 NEXT_PUBLIC_API_URL=http://localhost:8000
 ```
+
 ### 3. Run with Docker Compose
 
 ```bash
@@ -84,7 +85,6 @@ docker-compose up --build
 - PGAdmin: [http://localhost:5050](http://localhost:5050)
 
 ---
-
 
 ## API Endpoints
 
@@ -102,20 +102,3 @@ Swagger available at `/docs`.
 - Stack: `react-leaflet`, `zod`, `@tanstack/react-query`, Tailwind CSS
 
 ---
-
-## 🛠️ Dev Commands
-
-### Backend
-
-```bash
-cd backend
-uvicorn app.main:app --reload
-```
-
-### Frontend
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
