@@ -60,15 +60,15 @@ cd geo-company-map
 
 ### ✅ 2. Create Environment Files
 
-Create the following `.env` files manually:
+Create the following `.env` files:
 
-#### 🔹 `.env` (at project root, used by **backend**)
+### backend/.env.example
 
 ```env
 DATABASE_URL=postgresql://postgres:postgres@geo_db:5432/postgres
 ```
 
-#### 🔹 `frontend/.env` (used by **frontend**)
+### frontend/.env.example
 
 ```env
 NEXT_PUBLIC_API_URL=http://localhost:8000
@@ -85,22 +85,6 @@ docker-compose up --build
 
 ---
 
-## Environment Variables
-
-### backend/.env.example
-
-```env
-DATABASE_URL=postgresql://postgres:postgres@geo_db:5432/postgres
-
-```
-
-### frontend/.env.example
-
-```env
-NEXT_PUBLIC_BACKEND_URL=http://localhost:8000
-```
-
----
 
 ## API Endpoints
 
