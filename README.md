@@ -82,7 +82,6 @@ docker-compose up --build
 
 - Frontend: [http://localhost:3000](http://localhost:3000)
 - Backend: [http://localhost:8000/docs](http://localhost:8000/docs)
-- PGAdmin: [http://localhost:5050](http://localhost:5050)
 
 ---
 
@@ -102,3 +101,16 @@ Swagger available at `/docs`.
 - Stack: `react-leaflet`, `zod`, `@tanstack/react-query`, Tailwind CSS
 
 ---
+
+## Requirements
+
+This project uses Docker for development and deployment. However, if you plan to run the backend or frontend outside of containers, ensure the following versions are installed:
+
+| Tool           | Version                       |
+| -------------- | ----------------------------- |
+| **Python**     | 3.11 (via `python:3.11-slim`) |
+| **Node.js**    | 20.x (via `node:20-alpine`)   |
+| **Docker**     | 24.x or later                 |
+| **PostgreSQL** | 15+ with PostGIS extension    |
+
+> ⚠️ **Note:** If you're using Docker Compose (recommended), you don't need to install Python or Node.js locally — everything is containerized.
